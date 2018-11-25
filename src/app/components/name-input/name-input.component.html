@@ -1,0 +1,12 @@
+<div class="input-name">
+  <p class="center">Name: </p>
+  <input class="center" type="text" [(ngModel)]="name"/>
+</div>
+<div class="input-name">
+  <app-skill-item class="center" *ngFor="let skill of skills; let ind = index" [name]="name"
+                  (isClicked)="onClicked($event)" [skillItem]="skill">
+  </app-skill-item>
+</div>
+<div class="input-name">
+<h2 class="center">Total: {{total}}</h2>
+</div>
